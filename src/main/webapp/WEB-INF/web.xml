@@ -1,7 +1,24 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
-<web-app>
+<web-app version="3.1">
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>PgPrincipalServlet</servlet-name>
+  	<display-name>PgPrincipalServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.squirreltail.controllers.PgPrincipalServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PrincipalServlet</servlet-name>
+  	<display-name>PrincipalServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.squirrelTail.controllers.PrincipalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>PgPrincipalServlet</servlet-name>
+  	<url-pattern>/PgPrincipalServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PrincipalServlet</servlet-name>
+  	<url-pattern>/Principal</url-pattern>
+  </servlet-mapping>
 </web-app>
