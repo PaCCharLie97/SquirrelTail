@@ -1,13 +1,31 @@
 package com.squirrelTail.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="usuario")
 public class Usuario {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int nid;
+	@Column(name="nombre")
 	private String nombre;
-	private String email;
+	@Column(name="cp")
 	private int codigoPostal;
+	@Column(name="email")
+	private String email;
+	
+	@Column(name="password")
 	private String password;
+	@Column(name="n_bares")
 	private int nºbares;
+	
 	
 	public Usuario() {
 

@@ -1,21 +1,54 @@
 package com.squirrelTail.models;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+@Entity
+@Table(name="bar")
 public class Bar {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int bid;
+	@Column(name="nombre")
 	private String nombre;
+	
+	@Column(name="direccion")
 	private String direccion;
+	
+	@Column(name="telefono")
 	private int telefono;
+	
+	@Column(name="latitud")
 	private double latitud;
+	
+	@Column(name="longitud")
 	private double longitud;
+	
+	@Column(name="descripcion")
 	private String descripcion;
-	private String cerveza;
+	
+	@ManyToMany(cascade = { CascadeType.ALL })
+    @JoinTable(
+        name = "bar_cerveza", 
+        joinColumns = { @JoinColumn(name = "bar_id") }, 
+        inverseJoinColumns = { @JoinColumn(name = "cerveza_id") }
+    )
+	private List<Cerveza> cervezas;
 	
 	public Bar() {
 		
 	}
 
-	public Bar(int bid, String nombre, String direccion, int telefono, double latitud, double longitud, String descripcion, String cerveza) {
+	public Bar(int bid, String nombre, String direccion, int telefono, double latitud, double longitud, String descripcion) {
 		super();
 		this.bid = bid;
 		this.nombre = nombre;
@@ -24,7 +57,7 @@ public class Bar {
 		this.latitud = latitud;
 		this.longitud = longitud;
 		this.descripcion = descripcion;
-		this.cerveza = cerveza;
+		
 	}
 
 	public int getBid() {
@@ -55,6 +88,14 @@ public class Bar {
 		return telefono;
 	}
 
+	public List<Cerveza> getCervezas() {
+		return cervezas;
+	}
+
+	public void setCervezas(List<Cerveza> cervezas) {
+		this.cervezas = cervezas;
+	}
+
 	public void setTelefono(int telefono) {
 		this.telefono = telefono;
 	}
@@ -83,12 +124,6 @@ public class Bar {
 		this.descripcion = descripcion;
 	}
 
-	public String getCerveza() {
-		return cerveza;
-	}
 
-	public void setCerveza(String cerveza) {
-		this.cerveza = cerveza;
-	}
 	
 }
