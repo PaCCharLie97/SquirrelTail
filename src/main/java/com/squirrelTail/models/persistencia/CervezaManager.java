@@ -19,4 +19,8 @@ public class CervezaManager {
 	}
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8952cb3666f23ef1cfa3394585c8597b8cf11fec

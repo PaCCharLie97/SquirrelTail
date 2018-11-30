@@ -23,4 +23,8 @@ public class BarManager extends HttpServlet {
 		sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8952cb3666f23ef1cfa3394585c8597b8cf11fec
