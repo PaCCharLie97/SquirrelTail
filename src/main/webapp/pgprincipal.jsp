@@ -1,5 +1,9 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
 <html lang="en">
 
 
@@ -24,18 +28,7 @@
 	<div id="map"></div>
 
 
-	<ul>
-		<c:forEach var="unBar" items="${lista_bares}">
-			<li>
-			${unBar.nombre}|${unBar.latitud}|${unBar.longitud}|${unBar.descripcion}|${unBar.enlace}
-			<a href="./barejemplo?bid=${unBar.bid}">Bar</a>
-			<a href="./barejemplo1?bid=${unBar.bid}">Bar</a>
-			<a href="./barejemplo2?bid=${unBar.bid}">Bar</a>
-			<a href="./barejemplo3?bid=${unBar.bid}">Bar</a>
-			<a href="./barejemplo4?bid=${unBar.bid}">Bar</a>
-			</li>
-		</c:forEach>
-	</ul>
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -60,41 +53,18 @@
 
 <script>
 	let bares = [
-			{
-				"nombre" : "Bar el Alamo",
-				"latitud" : 40.4619445,
-				"longitud" : -3.6741318,
-				"descripcion" : "<h6>Chupitos Gratis de 00:00 a 00:30 los martes.</h6>",
-				"enlace" : "./barejemplo.html"
-			},
-			{
-				"nombre" : "Bar el Fresxo",
-				"latitud" : 40.4634891,
-				"longitud" : -3.6752189,
-				"descripcion" : "<h6>Con el Fresco ven al Fresxo y tienes un 3x2 en Birra.</h6>",
-				"enlace" : "./barejemplo.1.html"
-			},
-			{
-				"nombre" : "Cerveceria Blanco y Azul",
-				"latitud" : 40.4637448,
-				"longitud" : -3.6764269,
-				"descripcion" : "<h6>Si vienes de blanco y azul, únicamente, chupito gratis.</h6>",
-				"enlace" : "./barejemplo.2.html"
-			},
-			{
-				"nombre" : "Taberna la Cocodrila",
-				"latitud" : 40.462959,
-				"longitud" : -3.6780409,
-				"descripcion" : "<h6>Todos los miercoles cerveza artesana nueva.</h6>",
-				"enlace" : "./barejemplo.3.html"
-			},
-			{
-				"nombre" : "Bar Pop Copas y tapas",
-				"latitud" : 40.461812,
-				"longitud" : -3.6767821,
-				"descripcion" : "<h6>Ven 5 dias en tres semanas y te regalamos la tapa del mes con tu birra.</h6>",
-				"enlace" : "./barejemplo.4.html"
-			} ];
+		<c:forEach var="unBar" items="${lista_bares}">
+		{
+		"nombre" : "${unBar.nombre}",
+		"direccion" :"${unBar.direccion}",
+		"telefono" : "${unBar.telefono}",
+		"latitud" : ${unBar.latitud} ,
+		"longitud" : ${unBar.longitud},
+		"descripcion" : "${unBar.descripcion}",
+		"enlace" : "${unBar.enlace}",
+		},		
+		</c:forEach>
+ 	];
 
 
 	window.onload=function(){

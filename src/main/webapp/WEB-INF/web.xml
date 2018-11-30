@@ -4,31 +4,20 @@
   	<servlet-name>PgPrincipalServlet</servlet-name>
   	<display-name>PgPrincipalServlet</display-name>
   	<description></description>
-  	<servlet-class>com.squirreltail.controllers.PgPrincipalServlet</servlet-class>
+  	<servlet-class>com.squirrelTail.controllers.PgPrincipalServlet</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>PrincipalServlet</servlet-name>
   	<display-name>PrincipalServlet</display-name>
-  	<description></description>
+  	<servlet-name>PrincipalServlet</servlet-name>
   	<servlet-class>com.squirrelTail.controllers.PrincipalServlet</servlet-class>
   </servlet>
-  <servlet>
-  	<description>
-  	</description>
-  	<display-name>BarManager</display-name>
-  	<servlet-name>BarManager</servlet-name>
-  	<servlet-class>com.squirrelTail.models.persistencia.BarManager</servlet-class>
-  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>PgPrincipalServlet</servlet-name>
   	<url-pattern>/PgPrincipalServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>PrincipalServlet</servlet-name>
-  	<url-pattern>/Principal</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>BarManager</servlet-name>
-  	<url-pattern>/BarManager</url-pattern>
+  	<url-pattern>/PrincipalServlet</url-pattern>
   </servlet-mapping>
 </web-app>

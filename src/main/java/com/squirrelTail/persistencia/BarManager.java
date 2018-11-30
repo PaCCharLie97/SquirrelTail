@@ -1,14 +1,18 @@
 package com.squirrelTail.persistencia;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServlet;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.squirrelTail.models.Bar;
 
-public class BarManager extends HttpServlet {
+public class BarManager{
 	private static final long serialVersionUID = 1L;
-       
+
 	private static BarManager instancia = null;
 	private static SessionFactory sf = null;
 
@@ -18,9 +22,20 @@ public class BarManager extends HttpServlet {
 
 		return instancia;
 	}
-	
+
 	private BarManager() throws Exception {
 		sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+	}
+
+	public List<Bar> dameTodosLosBares() throws Exception {
+		List<Bar> bar = null;
+
+		Session session = sf.openSession();
+
+		bar = session.createQuery("FROM Bar").list();
+
+		session.close();
+		return bar;
 	}
 
 }

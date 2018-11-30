@@ -36,6 +36,9 @@ public class Bar {
 	@Column(name="descripcion")
 	private String descripcion;
 	
+	@Column(name="enlace")
+	private String enlace;
+	
 	@ManyToMany(cascade = { CascadeType.ALL })
     @JoinTable(
         name = "bar_cerveza", 
@@ -48,7 +51,22 @@ public class Bar {
 		
 	}
 
-	public Bar(int bid, String nombre, String direccion, int telefono, double latitud, double longitud, String descripcion) {
+
+
+	public String getEnlace() {
+		return enlace;
+	}
+
+
+
+	public void setEnlace(String enlace) {
+		this.enlace = enlace;
+	}
+
+
+
+	public Bar(int bid, String nombre, String direccion, int telefono, double latitud, double longitud,
+			String descripcion, String enlace, List<Cerveza> cervezas) {
 		super();
 		this.bid = bid;
 		this.nombre = nombre;
@@ -57,8 +75,11 @@ public class Bar {
 		this.latitud = latitud;
 		this.longitud = longitud;
 		this.descripcion = descripcion;
-		
+		this.enlace = enlace;
+		this.cervezas = cervezas;
 	}
+
+
 
 	public int getBid() {
 		return bid;
