@@ -13,6 +13,13 @@
   	<description></description>
   	<servlet-class>com.squirrelTail.controllers.PrincipalServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>BarManager</display-name>
+  	<servlet-name>BarManager</servlet-name>
+  	<servlet-class>com.squirrelTail.models.persistencia.BarManager</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>PgPrincipalServlet</servlet-name>
   	<url-pattern>/PgPrincipalServlet</url-pattern>
@@ -20,5 +27,9 @@
   <servlet-mapping>
   	<servlet-name>PrincipalServlet</servlet-name>
   	<url-pattern>/Principal</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BarManager</servlet-name>
+  	<url-pattern>/BarManager</url-pattern>
   </servlet-mapping>
 </web-app>
