@@ -1,4 +1,4 @@
-package com.squirrelTail.models.persistencia;
+package com.squirrelTail.persistencia;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -19,8 +19,4 @@ public class CervezaManager {
 	}
 
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8952cb3666f23ef1cfa3394585c8597b8cf11fec
