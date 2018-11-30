@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.squirrelTail.models;
 
 import javax.persistence.Column;
@@ -66,59 +65,3 @@ public class Cerveza {
 	}
 	
 }
-=======
-package com.squirrelTail.models;
-
-public class Cerveza {
-	
-	private int zid;
-	private String nombre;
-	private double alcohol;
-	private String descripcion;
-	
-	public Cerveza() {
-		
-	}
-
-	public Cerveza(int zid, String nombre, double alcohol, String descripcion) {
-		super();
-		this.zid = zid;
-		this.nombre = nombre;
-		this.alcohol = alcohol;
-		this.descripcion = descripcion;
-	}
-
-	public int getZid() {
-		return zid;
-	}
-
-	public void setZid(int zid) {
-		this.zid = zid;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public double getAlcohol() {
-		return alcohol;
-	}
-
-	public void setAlcohol(double alcohol) {
-		this.alcohol = alcohol;
-	}
-
-	public String getDescripcion() {
-		return descripcion;
-	}
-
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
-	}
-	
-}
->>>>>>> 8952cb3666f23ef1cfa3394585c8597b8cf11fec

@@ -1,4 +1,4 @@
-package com.squirrelTail.models.persistencia;
+package com.squirrelTail.persistencia;
 
 
 import org.hibernate.Session;
