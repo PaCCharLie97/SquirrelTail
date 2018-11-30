@@ -18,5 +18,6 @@ public class ClanManager {
 	private ClanManager() throws Exception {
 		sf = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 	}
+}
 
 

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 <web-app version="3.1">
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
@@ -34,29 +32,3 @@
   	<url-pattern>/BarManager</url-pattern>
   </servlet-mapping>
 </web-app>
-=======
-
-<web-app version="3.1">
-  <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>PgPrincipalServlet</servlet-name>
-  	<display-name>PgPrincipalServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.squirreltail.controllers.PgPrincipalServlet</servlet-class>
-  </servlet>
-  <servlet>
-  	<servlet-name>PrincipalServlet</servlet-name>
-  	<display-name>PrincipalServlet</display-name>
-  	<description></description>
-  	<servlet-class>com.squirrelTail.controllers.PrincipalServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>PgPrincipalServlet</servlet-name>
-  	<url-pattern>/PgPrincipalServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>PrincipalServlet</servlet-name>
-  	<url-pattern>/Principal</url-pattern>
-  </servlet-mapping>
-</web-app>
->>>>>>> c52066149be62fa2fa1bdae78fd39667f4e569ce
