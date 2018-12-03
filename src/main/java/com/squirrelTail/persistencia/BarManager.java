@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.ricardo.models.Employee;
 import com.squirrelTail.models.Bar;
 
 public class BarManager{
@@ -37,5 +38,14 @@ public class BarManager{
 		session.close();
 		return bar;
 	}
+	
+	public Bar getBar(int bid) throws Exception {
+		Session session = sf.openSession();
 
+		Bar recB = session.get(Bar.class, bid);
+
+		session.close();
+
+		return recB;
+	}
 }
