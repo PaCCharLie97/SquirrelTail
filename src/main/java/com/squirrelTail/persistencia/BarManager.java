@@ -2,13 +2,10 @@ package com.squirrelTail.persistencia;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServlet;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.ricardo.models.Employee;
 import com.squirrelTail.models.Bar;
 
 public class BarManager{
@@ -47,5 +44,10 @@ public class BarManager{
 		session.close();
 
 		return recB;
+	}
+
+	public Bar getBarByBid(int bidInt) {
+		////// crear metodoooo x dios
+		return null;
 	}
 }

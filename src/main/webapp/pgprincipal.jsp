@@ -61,7 +61,6 @@
 		"latitud" : ${unBar.latitud} ,
 		"longitud" : ${unBar.longitud},
 		"descripcion" : "${unBar.descripcion}",
-		"enlace" : "${unBar.enlace}",
 		},		
 		</c:forEach>
  	];

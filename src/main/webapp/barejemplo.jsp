@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,22 +20,15 @@
 	<section>
 		<div class="pergamino">
 			<h1>
-				<span class="orange">${bar.nombre}</span> <span class="yellow">Fresxo</span>
+				<span class="orange">${unBar.nombre}</span> 
 			</h1>
 		</div>
 
-		<article>${bar.direccion} ${bar.telefono}</article>
+		<article>${unBar.direccion} | ${unBar.telefono}</article>
 
-		<article class="bares">
-			<div>
-				<img src="./images/barejemplo1.jfif" alt="">
-			</div>
-			<div>
-				<img src="./images/mapa.png" alt="">
-			</div>
-		</article>
 
-		<div>${bar.descripcion}</div>
+
+		<div>${unBar.descripcion}</div>
 
 		<h2>Cervezas:</h2>
 
@@ -49,6 +46,7 @@
 		</div>
 
 	</section>
+	
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
