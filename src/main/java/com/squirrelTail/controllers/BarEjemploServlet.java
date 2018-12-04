@@ -2,6 +2,7 @@ package com.squirrelTail.controllers;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +14,7 @@ import com.squirrelTail.models.Bar;
 import com.squirrelTail.persistencia.BarManager;
 import com.squirrelTail.persistencia.CervezaManager;
 
-
+@WebServlet("/barejemplo")
 public class BarEjemploServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
   
@@ -26,9 +27,9 @@ public class BarEjemploServlet extends HttpServlet {
 		try {
 			int bidInt=Integer.parseInt(bid);
 			
-			Bar bar=BarManager.getInstance().getBar(bidInt);
+			Bar barejem=BarManager.getInstance().getBar(bidInt);
 			
-			request.setAttribute("unBar",bar);
+			request.setAttribute("unBar",barejem);
 			
 		}catch (Exception e) {
 			System.out.println("Exception: "+ e.getMessage());

@@ -25,7 +25,7 @@ function initMap(bares) {
 							icon : './images/cerveza.png',
 							info : new google.maps.InfoWindow(
 									{
-										content : `<div class="bar"><h5>${bar.nombre}</h5></div><div class="texto"><h6>${bar.descripcion}<a href="${bar.enlace}" class="info"> mas info</a> </h6></div>`
+										content : `<div class="bar"><h5>${bar.nombre}</h5></div><div class="texto"><h6>${bar.descripcion}<a href="/BarEjemplo" class="info"> mas info</a> </h6></div>`
 									}),
 						});
 

@@ -2,13 +2,11 @@ package com.squirrelTail.persistencia;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServlet;
+import javax.security.auth.login.Configuration;
+import javax.websocket.Session;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
-import com.ricardo.models.Employee;
 import com.squirrelTail.models.Bar;
 
 public class BarManager{
@@ -33,7 +31,7 @@ public class BarManager{
 
 		Session session = sf.openSession();
 
-		bar = session.createQuery("FROM Bar").list();
+		bar = (session).createQuery("FROM Bar").list();
 
 		session.close();
 		return bar;

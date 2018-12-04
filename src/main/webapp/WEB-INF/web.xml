@@ -6,11 +6,7 @@
   	<description></description>
   	<servlet-class>com.squirrelTail.controllers.PgPrincipalServlet</servlet-class>
   </servlet>
-  <servlet>
-  	<display-name>PrincipalServlet</display-name>
-  	<servlet-name>PrincipalServlet</servlet-name>
-  	<servlet-class>com.squirrelTail.controllers.PrincipalServlet</servlet-class>
-  </servlet>
+  
   <servlet>
   	<description>
   	</description>
@@ -21,11 +17,11 @@
   
   <servlet-mapping>
   	<servlet-name>PgPrincipalServlet</servlet-name>
-  	<url-pattern>/PgPrincipal</url-pattern>
+  	<url-pattern>/principal</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>BarEjemploServlet</servlet-name>
-  	<url-pattern>/BarEjemplo</url-pattern>
+  	<url-pattern>/barejemplo</url-pattern>
   </servlet-mapping>
   
 </web-app>

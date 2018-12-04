@@ -22,13 +22,13 @@
 </head>
 
 <body>
-
+<jsp:include page="header.jsp"/>
 
 
 	<div id="map"></div>
 
 
-
+<jsp:include page="footer.jsp"/>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

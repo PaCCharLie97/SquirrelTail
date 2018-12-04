@@ -11,16 +11,16 @@
 <link rel="stylesheet" href="./css/styleBE1.css">
 </head>
 <body>
-
+<jsp:include page="header.jsp"/>
 
 	<section>
 		<div class="pergamino">
 			<h1>
-				<span class="orange">${bar.nombre}</span> <span class="yellow">Fresxo</span>
+				<span class="orange">${unBar.nombre}</span> <span class="yellow">Fresxo</span>
 			</h1>
 		</div>
 
-		<article>${bar.direccion} ${bar.telefono}</article>
+		<article>${unBar.direccion} ${unBar.telefono}</article>
 
 		<article class="bares">
 			<div>
@@ -31,7 +31,7 @@
 			</div>
 		</article>
 
-		<div>${bar.descripcion}</div>
+		<div>${unBar.descripcion}</div>
 
 		<h2>Cervezas:</h2>
 
@@ -49,7 +49,7 @@
 		</div>
 
 	</section>
-
+<jsp:include page="footer.jsp"/>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
