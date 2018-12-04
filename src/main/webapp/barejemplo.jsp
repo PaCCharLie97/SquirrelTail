@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,20 +20,21 @@
 	<section>
 		<div class="pergamino">
 			<h1>
+<<<<<<< HEAD:src/main/webapp/barejemplo.jsp
 				<span class="orange">${unBar.nombre}</span> <span class="yellow">Fresxo</span>
 			</h1>
 		</div>
 
 		<article>${unBar.direccion} ${unBar.telefono}</article>
+=======
+				<span class="orange">${unBar.nombre}</span> 
+			</h1>
+		</div>
 
-		<article class="bares">
-			<div>
-				<img src="./images/barejemplo1.jfif" alt="">
-			</div>
-			<div>
-				<img src="./images/mapa.png" alt="">
-			</div>
-		</article>
+		<article>${unBar.direccion} | ${unBar.telefono}</article>
+
+>>>>>>> d85b73cd487ce35f6fbc2774b0742feb435b4a71:src/main/webapp/barejemplo.jsp
+
 
 		<div>${unBar.descripcion}</div>
 
@@ -49,7 +54,12 @@
 		</div>
 
 	</section>
+<<<<<<< HEAD:src/main/webapp/barejemplo.jsp
 <jsp:include page="footer.jsp"/>
+=======
+	
+
+>>>>>>> d85b73cd487ce35f6fbc2774b0742feb435b4a71:src/main/webapp/barejemplo.jsp
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

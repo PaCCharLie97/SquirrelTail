@@ -2,9 +2,13 @@ package com.squirrelTail.persistencia;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import javax.security.auth.login.Configuration;
 import javax.websocket.Session;
 
+=======
+import org.hibernate.Session;
+>>>>>>> d85b73cd487ce35f6fbc2774b0742feb435b4a71
 import org.hibernate.SessionFactory;
 
 import com.squirrelTail.models.Bar;
@@ -45,5 +49,10 @@ public class BarManager{
 		session.close();
 
 		return recB;
+	}
+
+	public Bar getBarByBid(int bidInt) {
+		////// crear metodoooo x dios
+		return null;
 	}
 }
